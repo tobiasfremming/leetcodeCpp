@@ -17,19 +17,29 @@ public:
     }
 
 public:
-    bool placeFlowers(vector<int>& flowers, int flowersToPlace){
+    bool placeFlowers(vector<int>& flowerbed, int n) {
         int hasPlaced = 0;
-        for (int i = 1; i < flowers.size() - 1; i++){
-            if (flowers[i] == 0 && flowers[i-1] == 0 && flowers[i+1] == 0){
-                flowers[i] = 1;
-                hasPlaced += 1;
-                if (hasPlaced == flowersToPlace) {
+        vector <int> padded = {0};
+        for (int i = 0; i < flowerbed.size(); i++){
+            padded.push_back(flowerbed[i]);
+        }
+        padded.push_back(0);
+        for (int i = 1; i < padded.size()-1; i++){
+            if (hasPlaced == n) {
                     return true;
                 }
+            if (padded[i] == 0 && padded[i-1] == 0 && padded[i+1] == 0){
+                padded[i] = 1;
+                hasPlaced += 1;
 
             }
         }
+        if (hasPlaced == n) {
+                    return true;
+                }
+        
         return false;
+        
     }
 
 
