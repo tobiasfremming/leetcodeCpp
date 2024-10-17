@@ -30,7 +30,7 @@ int main() {
     int result_sum = 0;
 
     for (int i = 0; i < 256; i++) {
-        result_sum += vector_c[i] 
+        result_sum += vector_c[i];
     }
     
     printf("Result: sum = % d", result_sum);
