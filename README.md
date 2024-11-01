@@ -1,4 +1,4 @@
 # leetcodeCpp
 
 Hving fun with C++
-Trying to do one a day as puzzles for fun.
+Doing puzzles when I have time at the end of a school day or before bed. 
